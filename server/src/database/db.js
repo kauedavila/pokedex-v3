@@ -4,7 +4,7 @@ const connectDatabase = () => {
   console.log("Conectando ao database...");
   mongoose
     .connect(
-      "mongodb+srv://kaue:Pv9BGHdjALz4RETa@cluster0.qmmrahm.mongodb.net/?retryWrites=true&w=majority",
+      "mongodb+srv://kaue:tZemco1rIgdz5EWu@cluster0.qmmrahm.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
