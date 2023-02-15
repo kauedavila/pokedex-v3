@@ -3,6 +3,7 @@ import { PaginationHome } from "@/components/home/pagination.home";
 import { Header } from "@/layouts/header";
 import { getPokeList } from "@/services/home/getPokeList";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 
 const limit = 898;
@@ -28,14 +29,20 @@ export default function Home({ pokemons }: { pokemons: Pokemon[] }) {
       <Header />
 
       <div
-        className="flex flex-col items-center justify-center gap-5 bg-white
+        className="page-container flex flex-col items-center justify-center gap-5 bg-white bg-opacity-50
       border-2 border-gray-200 rounded-lg shadow-lg p-5"
       >
         <div className="flex flex-wrap justify-center items-center gap-5">
           {pokemons
             .filter((_, k) => k >= offset - 1 && k < offset + pagelimit)
             .map((pokemon, k) => (
-              <CardHome key={pokemon.name} pokemon={pokemon} id={k + offset} />
+              <Link href={`/pokemon/${k + offset}`} key={k}>
+                <CardHome
+                  key={pokemon.name}
+                  pokemon={pokemon}
+                  id={k + offset}
+                />
+              </Link>
             ))}
         </div>
         <PaginationHome
