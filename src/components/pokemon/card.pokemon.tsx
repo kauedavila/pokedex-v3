@@ -15,7 +15,7 @@ const CardPokemon = ({ id }: { id: string }) => {
   }, [id]);
 
   return (
-    <div className="grid grid-cols-2 page-container bg-white bg-opacity-50 border-2 border-gray-200 rounded-lg shadow-lg p-5">
+    <div className="grid sm:grid-cols-2 grid-cols-1 gap-10 page-container bg-white bg-opacity-50 border-2 border-gray-200 rounded-lg shadow-lg p-5">
       <InfoPokemon pokemon={pokemon} />
       <StatsPokemon pokemon={pokemon} />
     </div>

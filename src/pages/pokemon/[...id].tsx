@@ -19,7 +19,7 @@ export const PokePage = ({ id }: { id: string }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = Array.from(Array(858), (_, i) => i + 1).map((i) => ({
+  const paths = Array.from(Array(898), (_, i) => i + 1).map((i) => ({
     params: { id: [i.toString()] },
   }));
 

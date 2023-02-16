@@ -1,6 +1,5 @@
 import { CardHome } from "@/components/home/card.home";
 import { PaginationHome } from "@/components/home/pagination.home";
-import { Header } from "@/layouts/header";
 import { getPokeList } from "@/services/home/getPokeList";
 import Head from "next/head";
 import Link from "next/link";
@@ -26,7 +25,6 @@ export default function Home({ pokemons }: { pokemons: Pokemon[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
 
       <div
         className="page-container flex flex-col items-center justify-center gap-5 bg-white bg-opacity-50
