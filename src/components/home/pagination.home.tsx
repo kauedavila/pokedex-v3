@@ -20,10 +20,13 @@ export const PaginationHome = ({
   };
 
   return (
-    //without SVG
-    <div className="flex flex-row items-center justify-center gap-5">
+    <div
+      className="flex flex-row items-center justify-center gap-5 
+    bg-slate-300 bg-opacity-50 border-2 border-gray-200 rounded-lg shadow-lg p-5
+    "
+    >
       <button
-        className="bg-slate-300 rounded-lg shadow-lg p-2"
+        className="bg-gradient-to-tr from-white to-slate-300 rounded-lg shadow-lg p-4 border-2 cursor-pointer disabled:cursor-not-allowed "
         onClick={handleClick("prev")}
         disabled={page === 1}
       >
@@ -31,7 +34,8 @@ export const PaginationHome = ({
       </button>
       {
         <select
-          className="bg-slate-300 rounded-lg shadow-lg p-2"
+          className=" 
+        bg-gradient-to-tr from-white to-slate-300 rounded-lg shadow-lg p-4 border-2 cursor-pointer disabled:cursor-not-allowed "
           value={offset}
           onChange={(e) => setOffset(Number(e.target.value) || 1)}
         >
@@ -44,7 +48,8 @@ export const PaginationHome = ({
       }
 
       <button
-        className="bg-slate-300 rounded-lg shadow-lg p-2"
+        className=" 
+        bg-gradient-to-tr from-white to-slate-300 rounded-lg shadow-lg p-4 border-2 cursor-pointer disabled:cursor-not-allowed "
         onClick={handleClick("next")}
         disabled={page === maxpages}
       >

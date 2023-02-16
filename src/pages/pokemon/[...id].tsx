@@ -32,9 +32,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({
   params,
 }: {
-  params: { id: string[] };
+  params: { id: number };
 }) => {
-  const id = params.id[0];
+  const id = params.id;
 
   return {
     props: {
